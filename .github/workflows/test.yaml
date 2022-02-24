@@ -1,0 +1,13 @@
+name: beta build
+on:
+  push:
+    branches: [ main ]
+        
+jobs:
+  Deploy-to-beta:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Create Beta Build
+        run: |
+           echo ${{ github.sha }}
+           echo ${GITHUB_SHA::6}
