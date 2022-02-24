@@ -9,5 +9,9 @@ jobs:
     steps:
       - name: Create Beta Build
         run: |
+           echo long
            echo ${{ github.sha }}
+           
+           
+           echo short
            echo ${GITHUB_SHA::6}
